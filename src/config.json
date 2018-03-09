@@ -1,0 +1,16 @@
+{
+  "wsServer": "ws://localhost:3000",
+  "maxWaterLevel": 10,
+  "temperatureInterval": {
+    "min": 0,
+    "max": 20
+  },
+  "pressureInterval": {
+    "min": 0,
+    "max": 120000
+  },
+  "volumeInterval": {
+    "min": 0,
+    "max": 300
+  }
+}
