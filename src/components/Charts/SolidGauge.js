@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import Chart from "./Chart";
 import Highcharts from "highcharts";
 
-export default class Gauge extends Component {
+export default class SolidGauge extends Component {
   render() {
     const gaugeOptions = {
       chart: {
-        type: "gauge"
+        type: "solidgauge",
+        height: 250,
+        width: 300,
       },
 
       title: null,
@@ -29,16 +31,7 @@ export default class Gauge extends Component {
         enabled: false
       },
 
-      plotOptions: {
-        solidgauge: {
-          dataLabels: {
-            y: 5,
-            borderWidth: 0,
-            useHTML: true
-          }
-        }
-      },
-
+      // the value axis
       yAxis: {
         min: this.props.interval.min,
         max: this.props.interval.max,
@@ -53,7 +46,7 @@ export default class Gauge extends Component {
 
       series: [
         {
-          name: "Speed",
+          name: this.props.text,
           data: [0],
           dataLabels: {
             format:
@@ -69,7 +62,17 @@ export default class Gauge extends Component {
             valueSuffix: " " + this.props.measure
           }
         }
-      ]
+      ],
+
+      plotOptions: {
+        solidgauge: {
+          dataLabels: {
+            y: 5,
+            borderWidth: 0,
+            useHTML: true
+          }
+        }
+      }
     };
 
     return <Chart options={gaugeOptions} newVal={this.props.data} />;

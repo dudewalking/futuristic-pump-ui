@@ -21,7 +21,6 @@ export default class Chart extends Component {
 			nextProps.newVal >= 0
 				? point.update(nextProps.newVal)
 				: point.update(0);
-
 		}
 	}
 
