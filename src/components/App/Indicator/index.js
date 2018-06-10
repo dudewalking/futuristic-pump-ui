@@ -1,1 +1,1 @@
-export {Indicator} from './Indicator';
+export { Indicator } from "./Indicator";

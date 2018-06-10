@@ -1,0 +1,18 @@
+.app-footer {
+  align-self: flex-end;
+  flex-basis: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.app-footer div {
+  align-items: center;
+}
+
+.github-icon {
+  background-image: url(./github-icon.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+}

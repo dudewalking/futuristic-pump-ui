@@ -9,6 +9,7 @@ export default class Gauge extends Component {
         type: "gauge",
         height: 250,
         width: 300,
+        backgroundColor: "rgba(255, 255, 255, 0.0)"
       },
 
       title: null,
@@ -52,7 +53,7 @@ export default class Gauge extends Component {
       credits: {
         enabled: false
       },
-  
+
       series: [
         {
           name: "Speed",

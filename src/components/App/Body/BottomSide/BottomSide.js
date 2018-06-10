@@ -1,13 +1,12 @@
 import React from "react";
-import { StateTable } from "../../Pump/StateTable";
+import { ControllersTable } from "./ControllersTable";
 
 export const BottomSide = props => {
+  const { data } = props;
 
-    const { data } = props;
-
-    return (
-        <div className="footer">
-            <StateTable pumpData={data} />
-        </div>
-    );
-}
+  return (
+    <div className="footer">
+      <ControllersTable data={data} />
+    </div>
+  );
+};

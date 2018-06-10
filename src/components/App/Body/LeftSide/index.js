@@ -1,1 +1,1 @@
-export {LeftSide} from './LeftSide';
+export { LeftSide } from "./LeftSide";

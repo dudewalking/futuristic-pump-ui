@@ -1,9 +1,10 @@
 import React from "react";
+import "./Header.css";
+import { AppBar, Avatar } from "material-ui";
+import userSvg from "./default_user.svg";
 
-export function Header(props) {
-    return (
-        <div className="header">
-            {props.name}
-        </div>
-    );
-}
+export const Header = props => (
+  <div className="app-header">
+    <AppBar title={props.title} iconElementRight={<Avatar src={userSvg} />} />
+  </div>
+);

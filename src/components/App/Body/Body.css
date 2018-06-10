@@ -1,0 +1,39 @@
+.app-body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  flex: 1;
+}
+
+.app-body-middle {
+  display: flex;
+  max-height: 440px;
+}
+
+.app-body-middle > * {
+  flex: 1 1 160px;
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1 auto;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .middle-side {
+    flex: 2 0;
+  }
+  .aside-left {
+    order: 1;
+  }
+  .middle-side {
+    order: 2;
+  }
+  .aside-right {
+    order: 3;
+  }
+}

@@ -1,14 +1,9 @@
-import React, {Component} from "react";
-import pump from './pump.svg';
+import React from "react";
+import "./Pump.css";
+import pump from "./new-pump.svg";
 
-export class Pump extends Component {
-
-	render() {
-
-		return (
-			<div>
-				<img alt="Pump" src={pump} width="500px" height="500px"/>
-			</div>
-		);
-	}
-}
+export const Pump = props => (
+  <div className="pump">
+    <img alt="Pump" src={pump} width="350px" height="300px" />
+  </div>
+);

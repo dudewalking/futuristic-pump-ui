@@ -1,0 +1,27 @@
+.middle-side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid rgb(224, 224, 224);
+}
+
+.controllers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  align-items: center;
+}
+
+.process-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.process-buttons > div {
+  width: 30%;
+}

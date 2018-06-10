@@ -1,1 +1,1 @@
-export {MiddleSide} from "./MiddleSide";
+export { MiddleSide } from "./MiddleSide";

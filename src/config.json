@@ -1,5 +1,7 @@
 {
+  "githubUrl": "https://github.com/dudewalking/futuristic-pump-ui",
   "wsServer": "ws://localhost:3000",
+  "apiServer": "http://localhost:3000/api/v1",
   "maxWaterLevel": 10,
   "temperatureInterval": {
     "min": 0,

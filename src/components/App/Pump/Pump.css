@@ -1,0 +1,9 @@
+.pump {
+  width: 50%;
+  height: 300px;
+}
+
+.pump img {
+  max-width: 100%;
+  height: auto;
+}

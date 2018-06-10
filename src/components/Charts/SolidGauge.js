@@ -8,7 +8,7 @@ export default class SolidGauge extends Component {
       chart: {
         type: "solidgauge",
         height: 250,
-        width: 300,
+        width: 300
       },
 
       title: null,

@@ -1,1 +1,1 @@
-export {IndicatorSolid} from './IndicatorSolid';
+export { IndicatorSolid } from "./IndicatorSolid";
