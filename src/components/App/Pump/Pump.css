@@ -1,9 +1,16 @@
 .pump {
   width: 50%;
   height: 300px;
+  position: relative;
 }
 
 .pump img {
   max-width: 100%;
   height: auto;
+}
+
+.pump .water-animation {
+  position: absolute;
+  top: 45px;
+  left: 158px;
 }

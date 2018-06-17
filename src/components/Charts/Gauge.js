@@ -46,7 +46,8 @@ export default class Gauge extends Component {
         min: this.props.interval.min,
         max: this.props.interval.max,
         title: {
-          text: this.props.text
+          text: this.props.text + ", " + this.props.measure,
+          y: 100
         }
       },
 
@@ -56,17 +57,17 @@ export default class Gauge extends Component {
 
       series: [
         {
-          name: "Speed",
+          name: "Data",
           data: [0],
           dataLabels: {
+            borderWidth: 0,
+            padding: 15,
+            verticalAlign: "top",
             format:
-              '<div style="text-align:center"><span style="font-size:25px;color:' +
+              '<div style="text-align:center"><divstyle="font-size:25px;color:' +
               ((Highcharts.theme && Highcharts.theme.contrastTextColor) ||
                 "black") +
-              '">{y}</span><br/>' +
-              '<span style="font-size:12px;color:silver">' +
-              this.props.measure +
-              "</span></div>"
+              '">{y}</div>'
           },
           tooltip: {
             valueSuffix: " " + this.props.measure

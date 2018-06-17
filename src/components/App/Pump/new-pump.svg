@@ -63,7 +63,7 @@
      <g class="Group">
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id3">
-        <rect class="BoundingBox" stroke="none" fill="none" x="11666" y="9379" width="6734" height="7750"/>
+        <rect id="pumpToFill" class="BoundingBox" stroke="none" fill="none" x="11666" y="9379" width="6734" height="7750"/>
         <path fill="rgb(221,221,221)" stroke="none" d="M 15033,17127 L 11667,17127 11667,9380 18398,9380 18398,17127 15033,17127 Z"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 15033,17127 L 11667,17127 11667,9380 18398,9380 18398,17127 15033,17127 Z"/>
        </g>

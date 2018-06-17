@@ -73,7 +73,10 @@ export class MiddleSide extends Component {
           pumpState={this.state.pumpState}
           isStartAllowed={this.props.isStartAllowed}
         />
-        <Pump />
+        <Pump
+          pumpHeight={this.props.pumpHeight}
+          data={this.state.controllers}
+        />
         <ProcessButtons
           pumpState={this.state.pumpState}
           isStartAllowed={this.props.isStartAllowed}

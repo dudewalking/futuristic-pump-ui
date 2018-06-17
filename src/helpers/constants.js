@@ -12,7 +12,7 @@ export const MAX_WATER_LEVEL = config.maxWaterLevel;
 
 export const MIN_TEMPERATURE_LEVEL = config.temperatureInterval.min;
 export const MAX_TEMPERATURE_LEVEL = config.temperatureInterval.max;
-export const TEMPERATURE_MEASURE = `${String.fromCharCode(248)}C`;
+export const TEMPERATURE_MEASURE = `${String.fromCharCode(176)}C`;
 
 export const MIN_PRESSURE_LEVEL = config.pressureInterval.min;
 export const MAX_PRESSURE_LEVEL = config.pressureInterval.max;
