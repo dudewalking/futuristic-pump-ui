@@ -4,6 +4,7 @@ import { includes } from "lodash";
 import { Controllers } from "./Controllers";
 import { ProcessButtons } from "./ProcessButtons";
 import { Pump } from "../../Pump";
+import { Alert } from "../../Alert";
 import { getWrongStates } from "../../../../helpers/api/checkPumpState";
 import { getControllers } from "../../../../helpers/api/getControllers";
 
@@ -12,7 +13,8 @@ export class MiddleSide extends Component {
     controllers: [],
     pumpState: "",
     wrongStates: [],
-    runState: "11011"
+    runState: "11011",
+    isAlertOpen: false
   };
 
   componentDidMount() {
@@ -60,13 +62,27 @@ export class MiddleSide extends Component {
 
     this.setState({
       controllers: updatedControllers,
-      pumpState: updatedPumpState
+      pumpState: updatedPumpState,
+      isAlertOpen: updatedPumpState === "unsafe"
     });
   }
 
+  handleCloseAlert = () => {
+    this.setState({ isAlertOpen: false });
+  };
+
   render() {
+    let errorData = this.state.controllers.filter(
+      controller => controller.state === "unsafe"
+    );
+
     return (
       <div className="middle-side">
+        <Alert
+          handleClose={() => this.handleCloseAlert()}
+          isOpen={this.state.isAlertOpen}
+          errorData={errorData}
+        />
         <Controllers
           data={this.state.controllers}
           updateController={id => this.updateController(id)}
