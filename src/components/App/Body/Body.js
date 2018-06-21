@@ -70,7 +70,6 @@ export class Body extends Component {
       height: data.height ? data.height : 0
     });
     socket.send(message);
-
     this.setState({ isStartAllowed: false });
   }
 
@@ -83,19 +82,17 @@ export class Body extends Component {
   }
 
   getControllersData(data) {
-    this.setState({
-      controllersData: data
-    });
+    this.setState({ controllersData: data });
   }
 
   render() {
-    const { pumpData } = this.state;
+    const { pumpData, isStartAllowed } = this.state;
     return (
       <div className="app-body">
         <div className="app-body-middle">
           <LeftSide data={pumpData} />
           <MiddleSide
-            isStartAllowed={this.state.isStartAllowed}
+            isStartAllowed={isStartAllowed}
             pumpHeight={pumpData.height}
             getControllersData={data => this.getControllersData(data)}
             startProcess={() => this.startProcess()}
